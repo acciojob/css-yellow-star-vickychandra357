@@ -1,16 +1,41 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
-	<link rel="stylesheet" href="styles.css">
+  <title>Star CSS Example</title>
+  <style>
+    .star {
+      width: 0;
+      height: 0;
+      margin: 50px auto;
+      border-right: 50px solid transparent;
+      border-bottom: 35px solid yellow;
+      border-left: 50px solid transparent;
+      position: relative;
+    }
+
+    .star:before,
+    .star:after {
+      content: '';
+      position: absolute;
+      top: -8px;
+      left: -65px;
+      width: 12;
+      height: 12;
+      border-right: 50px solid transparent;
+      border-bottom: 35px solid yellow;
+      border-left: 50px solid transparent;
+    }
+
+    .star:before {
+      transform: rotate(60deg);
+    }
+
+    .star:after {
+      transform: rotate(120deg);
+    }
+  </style>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
-
+  <div class="star"></div>
 </body>
-
 </html>
